@@ -99,7 +99,7 @@ class StudentApi(View):
         # id = python_data.get('id',None)
         # if id is not None :
         stud = Student.objects.get(id=id)
-        serialzer = StudentSerializer(stud, data=python_data, partial=True)
+        serialzer = StudentSerializer(stud, data=python_data)
         if serialzer.is_valid():
             serialzer.save()
             msg = {'msg': 'Data Updated'}
