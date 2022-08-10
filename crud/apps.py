@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 class Rf1Config(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'rf1'
+    name = 'crud'
 

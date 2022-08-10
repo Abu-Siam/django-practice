@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('rf1', '0001_initial'),
+        ('crud', '0001_initial'),
     ]
 
     operations = [

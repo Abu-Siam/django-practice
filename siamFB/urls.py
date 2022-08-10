@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from status.views import home_view,detailed_status,status_list_view
-from rf1.views import student_view,single_student_view,create_student,StudentApi
+from crud.views import student_view,single_student_view,create_student,StudentApi,create_student_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_view),
+    # path('',home_view),
     path('status/<int:status_id>',detailed_status),
     path('status',status_list_view),
     path('students',student_view),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('student-classbased-view',StudentApi.as_view()),
     path('student-classbased-view/<int:id>', StudentApi.as_view()),
 
-    path('student-create',student_view)
+    path('student-create',student_view),
+    path('student-create-form',create_student_form)
 ]
